@@ -21,6 +21,7 @@
             --dark: #212529;
             --hospital-blue: #1a76d2;
             --hospital-light-blue: #e3f2fd;
+            --hospital-green: #2e7d32;
         }
         
         * {
@@ -180,6 +181,70 @@
             margin-bottom: 20px;
         }
         
+        /* Products Section */
+        .products {
+            background-color: #f8f9fa;
+        }
+        
+        .product-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s;
+            height: 100%;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .product-img {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .product-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .product-card:hover .product-img img {
+            transform: scale(1.1);
+        }
+        
+        .product-info {
+            padding: 20px;
+        }
+        
+        .product-price {
+            color: var(--hospital-green);
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+        
+        .product-rating {
+            color: #ffc107;
+            margin-bottom: 10px;
+        }
+        
+        .btn-product {
+            background-color: var(--hospital-blue);
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+        
+        .btn-product:hover {
+            background-color: #1565c0;
+            transform: translateY(-2px);
+        }
+        
         /* Doctors Section */
         .doctor-card {
             background-color: white;
@@ -215,41 +280,27 @@
             text-align: center;
         }
         
-        /* Testimonials */
-        .testimonials {
-            background-color: var(--hospital-light-blue);
+        /* Stats Section */
+        .stats {
+            background: linear-gradient(rgba(26, 118, 210, 0.9), rgba(26, 118, 210, 0.9)), url('https://images.unsplash.com/photo-1586773860418-d37222d8fce3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1173&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
         }
         
-        .testimonial-card {
-            background-color: white;
-            border-radius: 10px;
+        .stat-item {
             padding: 30px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            margin: 15px;
         }
         
-        .testimonial-text {
-            font-style: italic;
-            margin-bottom: 20px;
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
         }
         
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-        }
-        
-        .author-img {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            overflow: hidden;
-            margin-right: 15px;
-        }
-        
-        .author-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+        .stat-text {
+            font-size: 1.2rem;
         }
         
         /* Contact Section */
@@ -393,6 +444,9 @@
                         <a class="nav-link" href="#services">Services</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="#products">Products</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="#doctors">Doctors</a>
                     </li>
                     <li class="nav-item">
@@ -425,7 +479,7 @@
             <div class="row about-content">
                 <div class="col-lg-6">
                     <div class="about-img">
-                        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Dr. Michael Chen" class="img-fluid">
+                        <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Dr. Sarah Johnson" class="img-fluid">
                     </div>
                 </div>
                 <div class="col-lg-6 about-text">
@@ -508,6 +562,133 @@
         </div>
     </section>
 
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <div class="section-title">
+                <h2>Medical Products</h2>
+                <p class="lead">High-quality medical supplies and equipment for your healthcare needs</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1130&q=80" alt="Blood Pressure Monitor">
+                        </div>
+                        <div class="product-info">
+                            <h5>Digital Blood Pressure Monitor</h5>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <p class="product-price">₹49.99</p>
+                            <p>Accurate and easy-to-use digital blood pressure monitor for home use.</p>
+                            <button class="btn btn-product w-100">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="First Aid Kit">
+                        </div>
+                        <div class="product-info">
+                            <h5>Comprehensive First Aid Kit</h5>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <p class="product-price">₹29.99</p>
+                            <p>150-piece first aid kit for home, car, or workplace emergencies.</p>
+                            <button class="btn btn-product w-100">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1130&q=80" alt="Pulse Oximeter">
+                        </div>
+                        <div class="product-info">
+                            <h5>Finger Pulse Oximeter</h5>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="product-price">₹24.99</p>
+                            <p>Accurate oxygen saturation and pulse rate monitor for home use.</p>
+                            <button class="btn btn-product w-100">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80">
+                        </div>
+                        <div class="product-info">
+                            <h5>Digital Thermometer</h5>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <p class="product-price">₹15.99</p>
+                            <p>Fast and accurate digital thermometer with fever indicator.</p>
+                            <button class="btn btn-product w-100">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="text-center mt-4">
+                <a href="#" class="btn btn-outline-primary btn-lg">View All Products</a>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="15000">0</div>
+                        <div class="stat-text">Patients Treated</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="120">0</div>
+                        <div class="stat-text">Expert Doctors</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="25">0</div>
+                        <div class="stat-text">Years Experience</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="50">0</div>
+                        <div class="stat-text">Medical Services</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Doctors Section -->
     <section id="doctors" class="doctors">
         <div class="container">
@@ -523,6 +704,7 @@
                         <div class="doctor-info">
                             <h5>Dr. Sarah Johnson</h5>
                             <p class="text-muted">Cardiologist</p>
+                            <p class="small">15 years of experience in cardiac care and treatment.</p>
                         </div>
                     </div>
                 </div>
@@ -534,17 +716,19 @@
                         <div class="doctor-info">
                             <h5>Dr. Michael Chen</h5>
                             <p class="text-muted">Neurologist</p>
+                            <p class="small">Specialized in neurological disorders and treatments.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="doctor-card">
                         <div class="doctor-img">
-                            <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Dr. Michael Chen">
+                            <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Dr. Emily Rodriguez">
                         </div>
                         <div class="doctor-info">
                             <h5>Dr. Emily Rodriguez</h5>
                             <p class="text-muted">Pediatrician</p>
+                            <p class="small">Dedicated to children's health and wellness.</p>
                         </div>
                     </div>
                 </div>
@@ -556,14 +740,13 @@
                         <div class="doctor-info">
                             <h5>Dr. James Wilson</h5>
                             <p class="text-muted">Orthopedic Surgeon</p>
+                            <p class="small">Expert in joint replacement and sports injuries.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
- 
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
@@ -602,56 +785,9 @@
                                 <p>info@medicarehospital.com</p>
                             </div>
                         </div>
-                        <!-- <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-clock"></i>
-                            </div>
-                            <div>
-                                <h5>Opening Hours</h5>
-                                <p>Monday - Friday: 8:00 AM - 8:00 PM</p>
-                                <p>Saturday - Sunday: 9:00 AM - 5:00 PM</p>
-                            </div>
-                        </div> -->
+                       
                     </div>
                 </div>
-                <!-- <div class="col-lg-7">
-                    <div class="contact-form">
-                        <h3 class="mb-4">Book an Appointment</h3>
-                        <form>
-                            <div class="row">
-                                <div class="col-md-6 mb-3">
-                                    <input type="text" class="form-control" placeholder="Your Name" required>
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <input type="email" class="form-control" placeholder="Your Email" required>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6 mb-3">
-                                    <input type="tel" class="form-control" placeholder="Your Phone" required>
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <select class="form-select" required>
-                                        <option value="" disabled selected>Select Department</option>
-                                        <option>Cardiology</option>
-                                        <option>Neurology</option>
-                                        <option>Pediatrics</option>
-                                        <option>Orthopedics</option>
-                                        <option>Ophthalmology</option>
-                                        <option>Emergency</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="mb-3">
-                                <input type="date" class="form-control" required>
-                            </div>
-                            <div class="mb-3">
-                                <textarea class="form-control" rows="5" placeholder="Message (Optional)"></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary btn-lg w-100">Book Appointment</button>
-                        </form>
-                    </div>
-                </div> -->
             </div>
         </div>
     </section>
@@ -677,7 +813,7 @@
                             <li><a href="#home">Home</a></li>
                             <li><a href="#about">About Us</a></li>
                             <li><a href="#services">Services</a></li>
-                            <li><a href="#doctors">Doctors</a></li>
+                            <li><a href="#products">Products</a></li>
                             <li><a href="#contact">Contact</a></li>
                         </ul>
                     </div>
@@ -755,6 +891,40 @@
                 }
             });
         });
+
+        // Animate stats counter
+        function animateStats() {
+            const statElements = document.querySelectorAll('.stat-number');
+            statElements.forEach(stat => {
+                const target = parseInt(stat.getAttribute('data-count'));
+                const duration = 2000; // 2 seconds
+                const step = target / (duration / 16); // 60fps
+                let current = 0;
+                
+                const timer = setInterval(() => {
+                    current += step;
+                    if (current >= target) {
+                        stat.textContent = target;
+                        clearInterval(timer);
+                    } else {
+                        stat.textContent = Math.floor(current);
+                    }
+                }, 16);
+            });
+        }
+
+        // Initialize stats animation when stats section is in view
+        const statsSection = document.querySelector('.stats');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateStats();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        observer.observe(statsSection);
     </script>
 </body>
 
