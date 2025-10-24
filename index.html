@@ -794,6 +794,20 @@
 
         observer.observe(statsSection);
     </script>
+    <script>
+  // Close mobile navbar when clicking a nav link
+  document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      const navbarToggler = document.querySelector('.navbar-toggler');
+      const navbarCollapse = document.querySelector('#navbarNav');
+      
+      if (navbarToggler && navbarCollapse.classList.contains('show')) {
+        navbarToggler.click(); // triggers Bootstrap's collapse toggle
+      }
+    });
+  });
+</script>
+
 </body>
 
 </html>
